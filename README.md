@@ -2,9 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Ez az alkalmazás egy **ingyenes, nyílt forráskódú (Open Source) sablon**, amelynek segítségével **bármelyik magyar önkormányzat** vagy civil szervezet percek alatt létrehozhatja a saját településének látványos, átlátható költségvetési weboldalát.
-
-A projekt célja a **transzparencia növelése** és a bonyolult önkormányzati Excel táblázatok közérthetővé tétele a lakosság számára.
+Ez az alkalmazás egy **ingyenes, nyílt forráskódú sablon**, amelynek segítségével **bármelyik magyar önkormányzat** 
+létrehozhatja a saját településének látványos, átlátható költségvetési weboldalát.
 
 ---
 
@@ -194,9 +193,9 @@ A `src/config/investments.json` fájlban szerkesztheted a kiemelt beruházásoka
 
 ---
 
-## Ingyenes közzététel (Deployment)
+## Ingyenes közzététel
 
-### Vercel (Ajánlott — Legegyszerűbb)
+### Vercel
 
 1. Regisztrálj a [Vercel](https://vercel.com/)-re a GitHub fiókoddal
 2. Kattints az **"Add New Project"** gombra
@@ -213,7 +212,7 @@ A `src/config/investments.json` fájlban szerkesztheted a kiemelt beruházásoka
 3. Build command: `npm run build`
 4. Publish directory: `dist`
 
-### Firebase Hosting (Haladó)
+### Firebase Hosting
 
 A projektben található `firebase.json` már előkonfigurált:
 ```bash
@@ -233,7 +232,7 @@ A `dist/` mappa tartalmát másold fel bármelyik statikus hosting szolgáltatá
 
 ---
 
-## Fejlesztőknek (Helyi futtatás)
+## Fejlesztőknek
 
 ### Előfeltételek
 - [Node.js](https://nodejs.org/) 18+ (LTS ajánlott)
