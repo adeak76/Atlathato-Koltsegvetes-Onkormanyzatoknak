@@ -75,7 +75,7 @@ export default function BudgetExplanation() {
                         <h4 style={{ fontSize: '1.1rem', margin: 0, color: 'var(--text-main)' }}>4. Honnan van a pénz?</h4>
                     </div>
                     <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', lineHeight: 1.6, margin: 0 }}>
-                        A költségvetés gerincét a központi állami támogatások (amik a lakosság számától és feladatoktól függenek) és a <strong>helyi adók</strong> (Iparűzési Adó, Építményaó, Telekadó, Idegenforglami Adó) adják.
+                        A költségvetés gerincét a központi állami támogatások (amik a lakosság számától és feladatoktól függenek) és a <strong>helyi adók</strong> (Építményadó, Telekadó, Iparűzési Adó, Idegenforglami Adó) adják.
                         Minél stabilabb a helyi gazdaság és minél több vállalkozás működik a településen, annál több jut utána fejlesztésekre (ezt hívjuk Pénzügyi Autonómiának).
                     </p>
                 </div>
@@ -88,6 +88,7 @@ export default function BudgetExplanation() {
                     Fontos fogalmak! Az adott év elején elfogadott tervet hívjuk <strong>Költségvetési Tervezetnek / Eredeti Előirányzatnak</strong> (pl. a {config.alapEv}. évi adatok).
                     Azonban év közben történhetnek változások (pl. az önkormányzat nyer egy 10 milliós pályázatot, amit bele kell írni).
                     Az év végén, a ténylegesen elköltött összegeket tartalmazó végleges listát hívjuk <strong>Zárszámadásnak (Tényadatoknak)</strong>. Az átláthatóság érdekében {config.alapEv - 1}-ig visszamenőleg már a valós Tényadatokat láthatja a görbéken!
+                    A jobb átláthatóság és reálisabb pénzügyi helyzetértékelés érdekében a Működési Bevételek között a Pénzügyi Műveletek Bevételei (pl. kamatbevételek) nem szerepelnek!
                 </p>
             </div>
 
