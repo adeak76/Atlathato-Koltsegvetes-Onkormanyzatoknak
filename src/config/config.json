@@ -7,11 +7,11 @@
         "harmadlagos": "#3681B4"
     },
     "elerhetoseg": {
-        "cim": "8244 Dörgicde, Fő utca 16.",
+        "cim": "8244 Dörgicse, Fő utca 16.",
         "weboldal": "https://dorgicse.info.hu"
     },
     "szovegek": {
-        "polgarmesterNeve": "Pflanczner Sándor",
+        "polgarmesterNeve": "Pflanzner Sándor",
         "polgarmesterKoszonto": "Tisztelt Dörgicsei Lakosok! Örömmel mutatjuk be Önöknek településünk {alapEv}-es költségvetésének átlátható összefoglalóját. Célunk, hogy minden polgár számára <strong>közérthetővé</strong> tegyük, mire fordítja az önkormányzat a közös forrásainkat. Bízunk benne, hogy ez az eszköz hozzájárul a bizalom erősítéséhez és a közügyek iránti érdeklődés növeléséhez. {varosNeve} a következő években is a felelős, átlátható gazdálkodást tartja szem előtt.",
         "kisokosPeldak": {
             "kotelezo": "pl. óvodák fenntartása, közvilágítás, hivatal működése",
