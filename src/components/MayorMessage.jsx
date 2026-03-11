@@ -40,7 +40,7 @@ export default function MayorMessage({ data }) {
                 }}>
                     <img
                         src={config.kepek.polgarmester}
-                        alt={`${config.szovegek.polgarmesterNeve} Polgármester`}
+                        alt={`${config.szovegek.polgarmesterNeve} alpolgármester`}
                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                         onError={(e) => {
                             e.target.onerror = null;
@@ -63,7 +63,7 @@ export default function MayorMessage({ data }) {
 
                 <div style={{ flex: 1, minWidth: 'min(100%, 300px)' }}>
                     <p style={{ fontSize: '1.05rem', lineHeight: 1.6, color: 'var(--text-muted)', fontStyle: 'italic', margin: 0 }}>
-                        <strong style={{ color: 'var(--text-main)', fontStyle: 'normal' }}>{config.szovegek.polgarmesterNeve} (Mr. X):</strong> <span dangerouslySetInnerHTML={{ __html: `"${config.szovegek.polgarmesterKoszonto.replace('{alapEv}', config.alapEv).replace('{varosNeve}', config.varosNeve.split(' ')[0])}"` }} />
+                        <strong style={{ color: 'var(--text-main)', fontStyle: 'normal' }}>{config.szovegek.polgarmesterNeve} (alpolgármester):</strong> <span dangerouslySetInnerHTML={{ __html: `"${config.szovegek.polgarmesterKoszonto.replace('{alapEv}', config.alapEv).replace('{varosNeve}', config.varosNeve.split(' ')[0])}"` }} />
                     </p>
                 </div>
             </div>
