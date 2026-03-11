@@ -18,7 +18,7 @@ export default function MayorMessage({ data }) {
         }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                 <Quote size={32} color="var(--brand-primary)" style={{ opacity: 0.5 }} />
-                <h3 style={{ fontSize: '1.4rem', margin: 0, color: 'var(--text-main)' }}>A {config.alapEv}-os Elfogadott Költségvetés – Polgármesteri Tájékoztató</h3>
+                <h3 style={{ fontSize: '1.4rem', margin: 0, color: 'var(--text-main)' }}>A {config.alapEv}. évi Elfogadott Költségvetés – Polgármesteri Tájékoztató</h3>
             </div>
 
             <div style={{
