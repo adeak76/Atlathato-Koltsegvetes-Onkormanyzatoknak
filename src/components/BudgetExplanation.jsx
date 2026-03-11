@@ -17,8 +17,8 @@ export default function BudgetExplanation() {
                     <BookOpen size={28} /> Kisokos: Hogyan épül fel a költségvetés?
                 </h3>
                 <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', maxWidth: '800px', margin: '0 auto', lineHeight: 1.6 }}>
-                    Egy önkormányzat költségvetésének megértése kulcsfontosságú a transzparens városvezetéshez.
-                    Az alábbi rövid útmutató segít eligazodni abban, honnan lesz pénze a városnak és hogyan tervezi meg a jövőt.
+                    Egy önkormányzat költségvetésének megértése kulcsfontosságú a transzparens településvezetéshez.
+                    Az alábbi rövid útmutató segít eligazodni abban, honnan lesz pénze a településnek és hogyan tervezi meg a jövőt.
                 </p>
             </div>
 
@@ -46,8 +46,8 @@ export default function BudgetExplanation() {
                         <h4 style={{ fontSize: '1.1rem', margin: 0, color: 'var(--text-main)' }}>2. Működési kiadások</h4>
                     </div>
                     <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', lineHeight: 1.6, margin: 0 }}>
-                        A város mindennapos túléléséhez szükséges pénzek. Ide tartoznak a bérköltségek (Személyi juttatások), a közműdíjak és külsős szolgáltatások (Dologi kiadások),
-                        valamint az <strong>Állam felé fizetendő, kötelező Szolidaritási Hozzájárulás</strong> (ami a tehetősebb településektől elvont pénz a szegényebbek javára).
+                        A település mindennapos túléléséhez szükséges pénzek. Ide tartoznak a bérköltségek (Személyi juttatások), a közműdíjak és külsős szolgáltatások (Dologi kiadások),
+                        valamint az <strong>Állam felé fizetendő, kötelező elvonások</strong> (ami a tehetősebb településektől elvont pénz a szegényebbek javára).
                     </p>
                 </div>
 
@@ -62,7 +62,7 @@ export default function BudgetExplanation() {
                     <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', lineHeight: 1.6, margin: 0 }}>
                         Ezekből a forrásokból épülnek az új utak, óvodák, egészségügyi intézmények és újulnak meg a közterek.
                         A beruházásokhoz az önkormányzat <strong>saját forrást</strong>, illetve (ha van rá lehetőség) <strong>Hazai vagy EU-s pályázati támogatásokat</strong> használ fel.
-                        Ezek alkotják a város vagyonának növekedését.
+                        Ezek alkotják a település vagyonának növekedését.
                     </p>
                 </div>
 
@@ -75,8 +75,8 @@ export default function BudgetExplanation() {
                         <h4 style={{ fontSize: '1.1rem', margin: 0, color: 'var(--text-main)' }}>4. Honnan van a pénz?</h4>
                     </div>
                     <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', lineHeight: 1.6, margin: 0 }}>
-                        A költségvetés gerincét a központi állami támogatások (amik a lakosság számától és feladatoktól függenek) és a <strong>helyi adók</strong> (Iparűzési Adó - IPA, Építményadó) adják.
-                        Minél stabilabb a helyi gazdaság és minél több vállalkozás működik a városban, annál több jut utána fejlesztésekre (ezt hívjuk Pénzügyi Autonómiának).
+                        A költségvetés gerincét a központi állami támogatások (amik a lakosság számától és feladatoktól függenek) és a <strong>helyi adók</strong> (Iparűzési Adó, Építményaó, Telekadó, Idegenforglami Adó) adják.
+                        Minél stabilabb a helyi gazdaság és minél több vállalkozás működik a településen, annál több jut utána fejlesztésekre (ezt hívjuk Pénzügyi Autonómiának).
                     </p>
                 </div>
 
