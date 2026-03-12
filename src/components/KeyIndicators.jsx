@@ -68,7 +68,7 @@ export default function KeyIndicators({ data, historicalData }) {
     // Trend for Solidarity Tax
     const solidarityTrend = historicalData.map(d => ({
         year: d.year,
-        "Versenyképes Járások": d.expense.szolidaritas || 0
+        "Szolidaritási Hozzájárulás": d.expense.szolidaritas || 0
     }));
 
     return (
