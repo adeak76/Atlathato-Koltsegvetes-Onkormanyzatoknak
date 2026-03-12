@@ -88,7 +88,7 @@ export default function BudgetExplanation() {
                     Fontos fogalmak! Az adott év elején elfogadott tervet hívjuk <strong>Költségvetési Tervezetnek / Eredeti Előirányzatnak</strong> (pl. a {config.alapEv}. évi adatok).
                     Azonban év közben történhetnek változások (pl. az önkormányzat nyer egy 10 milliós pályázatot, amit bele kell írni).
                     Az év végén, a ténylegesen elköltött összegeket tartalmazó végleges listát hívjuk <strong>Zárszámadásnak (Tényadatoknak)</strong>. Az átláthatóság érdekében {config.alapEv - 1}-ig visszamenőleg már a valós Tényadatokat láthatja a görbéken, 
-                    valamint a reálisabb pénzügyi helyzetértékelés érdekében a Működési Bevételek között a <>i</>Pénzügyi Műveletek Bevételei (pl. kamatbevételek) nem szerepelnek</i>!
+                    valamint a reálisabb pénzügyi helyzetértékelés érdekében a Működési Bevételek között a <i>Pénzügyi Műveletek Bevételei (pl. kamatbevételek) nem szerepelnek</i>!
                 </p>
             </div>
 
