@@ -71,7 +71,7 @@ export default function BudgetChart({ data, onYearClick, selectedYear }) {
                             tick={{ fill: 'var(--text-muted)' }}
                             tickLine={false}
                             axisLine={false}
-                            tickFormatter={(value) => `${(value / 1e6).toFixed(2)} Mrd`}
+                            tickFormatter={(value) => `${(value / 1e6).toFixed(2)} millió`}
                             width={65}
                         />
                         <Tooltip content={<CustomTooltip />} cursor={{ stroke: 'rgba(0,0,0,0.15)', strokeWidth: 1, strokeDasharray: '5 5' }} />
