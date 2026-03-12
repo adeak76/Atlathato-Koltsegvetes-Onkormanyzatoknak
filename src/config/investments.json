@@ -2,22 +2,22 @@
     {
         "icon": "Building2",
         "colorRef": "elsodleges",
-        "title": "Művelődési Ház felújítása",
-        "amount": "120 millió Ft",
-        "desc": "A település központi művelődési házának teljes energetikai korszerűsítése, akadálymentesítése és belső felújítása."
+        "title": "Faluház felújítása",
+        "amount": "42 millió Ft",
+        "desc": "A faluház belső felújítása, energetikai korszerűsítése."
     },
     {
         "icon": "Route",
         "colorRef": "harmadlagos",
-        "title": "Kossuth utca útfelújítás",
-        "amount": "65 millió Ft",
-        "desc": "A legforgalmasabb belterületi út teljes burkolatcseréje és csapadékvíz-elvezető rendszer kiépítése."
+        "title": "Külterületi utak fejlesztése",
+        "amount": "46 millió Ft",
+        "desc": "KAP Külterületi utak fejlesztése pályázat megvalósítása (09 és 017 hrsz.)"
     },
     {
         "icon": "Smile",
         "colorRef": "masodlagos",
-        "title": "Központi Játszótér bővítése",
-        "amount": "Tervezési fázis",
-        "desc": "Új, modern játszóeszközök telepítése és a zöldterület bővítése a Városligetben, minden korosztály számára."
+        "title": "Kisdörgicsei kút",
+        "amount": "Tervezési fázis (60 millió)",
+        "desc": "Új kút fúrása a kisdörgicsei játszótér feletti önkormányzati területen."
     }
 ]
