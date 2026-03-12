@@ -26,7 +26,7 @@
         "polgarmesteriUzenet": true,
         "beruhazasok": true,
         "kulcsindikatorok": true,
-        "szolidaritasiGrafikon": true,
+        "szolidaritasiGrafikon": false,
         "koltsegvetesiKisokos": true,
         "bevetelMegoszlas": true,
         "kiadasMegoszlas": true
