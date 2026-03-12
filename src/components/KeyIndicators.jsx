@@ -12,7 +12,7 @@ const formatCurrencyMio = (val) => {
         style: 'currency',
         currency: 'HUF',
         maximumFractionDigits: 0
-    }).format(val / 1000000) + ' M';
+    }).format(val / 1000000) + ' millió';
 };
 
 const formatYoY = (val) => {
@@ -68,7 +68,7 @@ export default function KeyIndicators({ data, historicalData }) {
     // Trend for Solidarity Tax
     const solidarityTrend = historicalData.map(d => ({
         year: d.year,
-        "Szolidaritási Hozzájárulás": d.expense.szolidaritas || 0
+        "Versenyképes Járások": d.expense.szolidaritas || 0
     }));
 
     return (
