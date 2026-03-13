@@ -33,8 +33,8 @@ export default function CategoryBreakdown({ data, type }) {
         title = 'Működési Költségvetési Bevételek';
         colors = COLORS_INCOME;
         chartData = [
-            { name: 'Közhatalmi B.', value: data.income.kozh },
-            { name: 'Működési B.', value: data.income.mukod },
+            { name: 'Közhatalmi Bevétel', value: data.income.kozh },
+            { name: 'Működési Bevétel', value: data.income.mukod },
             { name: 'Átvett Pénzeszköz', value: data.income.atvett },
             // Other calculation (maradék ha van)
             { name: 'Egyéb Támogatás/Bevétel', value: Math.max(0, data.income.total - (data.income.kozh + data.income.mukod + data.income.atvett)) }
@@ -43,7 +43,7 @@ export default function CategoryBreakdown({ data, type }) {
         title = 'Működési Költségvetési Kiadások';
         colors = COLORS_EXPENSE;
         chartData = [
-            { name: 'Személyi', value: data.expense.szemelyi },
+            { name: 'Személyi jellegű', value: data.expense.szemelyi },
             { name: 'Járulék', value: data.expense.jarulek },
             { name: 'Dologi', value: data.expense.dologi },
             { name: 'Pénzbeni Juttatás', value: data.expense.penzbeni },
