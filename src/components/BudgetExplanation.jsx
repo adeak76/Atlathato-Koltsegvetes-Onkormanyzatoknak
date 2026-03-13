@@ -75,7 +75,7 @@ export default function BudgetExplanation() {
                         <h4 style={{ fontSize: '1.1rem', margin: 0, color: 'var(--text-main)' }}>4. Honnan van a pénz?</h4>
                     </div>
                     <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', lineHeight: 1.6, margin: 0 }}>
-                        A költségvetés gerincét a központi állami támogatások (amik a lakosság számától és feladatoktól függenek) és a <strong>helyi adók</strong> (Építményadó, Telekadó, Iparűzési Adó, Idegenforglami Adó) adják.
+                        A költségvetés gerincét a <strong>központi állami támogatások</strong> (amik a lakosság számától és feladatoktól függenek) és a <strong>helyi adók</strong> (Építményadó, Telekadó, Iparűzési Adó, Idegenforglami Adó) adják.
                         Minél stabilabb a helyi gazdaság és minél több vállalkozás működik a településen, annál több jut utána fejlesztésekre (ezt hívjuk Pénzügyi Autonómiának).
                     </p>
                 </div>
