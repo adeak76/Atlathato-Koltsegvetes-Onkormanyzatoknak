@@ -115,7 +115,7 @@ function App() {
           {config.elerhetoseg.adoszam && <p style={{ fontSize: '0.95rem', marginBottom: '0.3rem' }}><strong>Adószám:</strong> {config.elerhetoseg.adoszam}</p>}
           <p style={{ fontSize: '0.95rem' }}><strong>Honlap:</strong> <a href={config.elerhetoseg.weboldal} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brand-primary)', textDecoration: 'none' }}>{config.elerhetoseg.weboldal.replace(/^https?:\/\/(www\.)?/, '')}</a></p>
           <p style={{ fontSize: '0.95rem' }}><strong>Email:</strong> <a href={config.elerhetoseg.email} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brand-primary)', textDecoration: 'none' }}>{config.elerhetoseg.email}</a></p>
-          <p style={{ fontSize: '0.95rem' }}>Verzió: <a href={config.elerhetoseg.verzio}</p>
+          <p style={{ fontSize: '0.95rem' }}>Verzió: <a href={config.verzio}</p>
         </div>
         <div style={{ width: '100%', maxWidth: '600px', borderTop: '1px solid rgba(0,0,0,0.1)', margin: '0.5rem 0' }}></div>
         <p style={{ fontSize: '0.85rem', textAlign: 'center', opacity: 0.8 }}>
