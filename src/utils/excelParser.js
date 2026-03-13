@@ -146,7 +146,7 @@ export const fetchAndParseData = async () => {
                     epitmeny: calcGrowth(current.income.epitmeny, prev.income.epitmeny),
                     telek: calcGrowth(current.income.telek, prev.income.telek),
                     dologi: calcGrowth(current.expense.dologi, prev.expense.dologi),
-                    ifa: calcGrowth(current.income.ifa, prev.income.ifa),
+                    ifa: calcGrowth(current.income.ifa, prev.income.ifa)
                 };
             }
         }
