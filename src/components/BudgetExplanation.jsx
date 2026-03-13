@@ -86,8 +86,8 @@ export default function BudgetExplanation() {
                 <h5 style={{ fontSize: '1rem', color: 'var(--text-main)', marginBottom: '0.5rem' }}>Fontos tudnivalók!</h5>
                 <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: 1.6, margin: 0 }}>
                     <strong>Eredeti Előirányzat vs. Zárszámadás</strong>: az adott év elején elfogadott tervet hívjuk <strong>Költségvetési Tervezetnek / Eredeti Előirányzatnak</strong> (pl. a {config.alapEv}. évi adatok).
-                    Azonban év közben történhetnek változások (pl. az önkormányzat nyer egy 10 milliós pályázatot, amit bele kell írni).
-                    Az év végén, a ténylegesen elköltött összegeket tartalmazó végleges listát hívjuk <strong>Zárszámadásnak (Tényadatoknak)</strong>. Az átláthatóság érdekében {config.alapEv - 1}-ig visszamenőleg már a valós Tényadatokat láthatja a görbéken. 
+                    Azonban év közben történhetnek változások (pl. előre nem várt és emiatt nem betervezett kiadások és bevételek), amiket utólagosan, a költségvetés módosítasa során bele kell írni.
+                    Az év végén, a ténylegesen teljesült bevételi és kiadási összegeket tartalmazó végleges listát hívjuk <strong>Zárszámadásnak (Tényadatoknak)</strong>. Az átláthatóság érdekében {config.alapEv - 1}-ig visszamenőleg már a valós Tényadatokat láthatja a görbéken. 
                     A reálisabb pénzügyi helyzetértékelés érdekében a <strong>Közös Önkormányzati Hivatal költségei</strong> a Személyi Jellegű Kiadások között szerepelnek, valamint a Működési Bevételek között a <strong>Pénzügyi Műveletek Bevételei (pl. kamatbevételek)</strong> nem szerepelnek!
                 </p>
             </div>
