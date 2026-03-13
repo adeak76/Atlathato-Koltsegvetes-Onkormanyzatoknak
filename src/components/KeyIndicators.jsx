@@ -50,6 +50,8 @@ export default function KeyIndicators({ data, historicalData }) {
     const totalLocalTax = data.income.ipa + data.income.epitmeny + data.income.telek + data.income.ifa;
     const ipaRatio = totalLocalTax > 0 ? data.income.ipa / totalLocalTax : 0;
     const epitmenyTelekRatio = totalLocalTax > 0 ? (data.income.epitmeny + data.income.telek) / totalLocalTax : 0;
+    const epitmenyRatio = totalLocalTax > 0 ? data.income.epitmeny / totalLocalTax : 0;
+    const telekRatio = totalLocalTax > 0 ? data.income.telek / totalLocalTax : 0;
     const ifaRatio = totalLocalTax > 0 ? data.income.ifa / totalLocalTax : 0;
 
     // Trend data for autonomy
