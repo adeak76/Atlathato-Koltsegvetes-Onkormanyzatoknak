@@ -163,14 +163,14 @@ export default function KeyIndicators({ data, historicalData }) {
                         </div>
                         <div className="responsive-stats">
                             <div className="responsive-stats-row">
-                                IPA arány ({data.year}): {formatPercent(ipaRatio)}
+                                Iparűzési adó arány ({data.year}): {formatPercent(ipaRatio)}
                                 {data.yoy && formatYoY(data.yoy.ipa)}
                             </div>
                             <div className="responsive-stats-row" style={{ marginBottom: 0 }}>
                                 Építmény- és Telekadó arány: {formatPercent(epitmenyTelekRatio)}
                             </div>
                             <div className="responsive-stats-row">
-                                IFA arány ({data.year}): {formatPercent(ifaRatio)}
+                                Idegenforgalmi adó: {formatPercent(ifaRatio)}
                                 {data.yoy && formatYoY(data.yoy.ifa)}
                             </div>
                         </div>
@@ -195,7 +195,7 @@ export default function KeyIndicators({ data, historicalData }) {
                                 <Legend wrapperStyle={{ paddingTop: '10px', fontSize: '0.85rem', color: 'var(--text-muted)' }} />
                                 <Bar dataKey="Iparűzési adó" stackId="a" fill="#034E81" radius={[0, 0, 4, 4]} />
                                 <Bar dataKey="Építmény- és Telekadó" stackId="a" fill="#00582A" radius={[4, 4, 0, 0]} />
-                                <Bar dataKey="Idegenforgalmi adó" stackId="a" fill="#EEEEEE" radius={[0, 0, 4, 4]} />
+                                <Bar dataKey="Idegenforgalmi adó" stackId="a" fill="purple" radius={[0, 0, 4, 4]} />
                             </BarChart>
                         </ResponsiveContainer>
                     </div>
