@@ -158,7 +158,7 @@ export default function KeyIndicators({ data, historicalData }) {
                 <div className="glass-panel" style={{ padding: '1.5rem', height: '400px', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                     <div className="responsive-header">
                         <div>
-                            <h4 style={{ color: 'var(--text-muted)' }}>Helyi Adók alakulása (millió Ft) és arányai</h4>
+                            <h4 style={{ color: 'var(--text-muted)' }}>Helyi Adók alakulása és arányai (millió Ft)</h4>
                             {/* Ide írhatsz települési adópolitikai megjegyzést, ha van ilyen */}
                         </div>
                         <div className="responsive-stats">
