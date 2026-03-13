@@ -175,9 +175,6 @@ export default function KeyIndicators({ data, historicalData }) {
                                 Iparűzési adó: {formatPercent(ipaRatio)}
                                 {data.yoy && formatYoY(data.yoy.ipa)}
                             </div>
-                          <!--  <div className="responsive-stats-row" style={{ marginBottom: 0 }}>
-                                Építmény- és Telekadó: {formatPercent(epitmenyTelekRatio)}
-                            </div> -->
                             <div className="responsive-stats-row" style={{ marginBottom: 0 }}>
                                 Építményadó: {formatPercent(epitmenyRatio)}
                                 {data.yoy && formatYoY(data.yoy.epitmeny)}
