@@ -166,7 +166,7 @@ export default function KeyIndicators({ data, historicalData }) {
                                 Iparűzési adó arány ({data.year}): {formatPercent(ipaRatio)}
                                 {data.yoy && formatYoY(data.yoy.ipa)}
                             </div>
-                            </div><div className="responsive-stats-row">
+                            <div className="responsive-stats-row">
                                 Idegenforgalmi adó: {formatPercent(ifaRatio)}
                                 {data.yoy && formatYoY(data.yoy.ifa)}
                             </div>
