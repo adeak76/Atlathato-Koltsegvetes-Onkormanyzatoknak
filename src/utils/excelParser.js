@@ -82,6 +82,7 @@ export const fetchAndParseData = async () => {
             const bevTelek = bevRow[6];  // G: Telekadó
             const bevM     = bevRow[7];  // H: Működési bevétel
             const bevA     = bevRow[8];  // I: Átvett pénzeszközök
+            const bevIfa   = bevRow[9];  // J: Iparűzési adó
 
             // Kiadások — egyszerű, egymás utáni oszlopok (B-tól H-ig)
             const kiadO            = kiadRow[1];  // B: Összes kiadás
@@ -104,7 +105,8 @@ export const fetchAndParseData = async () => {
                     mukod: parseValue(bevM),
                     atvett: parseValue(bevA),
                     allam: parseValue(bevAllam),
-                    sajat: parseValue(bevK) + parseValue(bevM) + parseValue(bevA)
+                    sajat: parseValue(bevK) + parseValue(bevM) + parseValue(bevA),
+                    ifa: parseValue(bevIfa)
                 },
                 expense: {
                     total: parseValue(kiadO),
@@ -129,8 +131,10 @@ export const fetchAndParseData = async () => {
                 current.yoy = { incomeTotal: 0, expenseTotal: 0, taxTotal: 0, dologi: 0 };
             } else {
                 const prev = results[i - 1];
-                const currTax = current.income.ipa + current.income.epitmeny + current.income.telek;
-                const prevTax = prev.income.ipa + prev.income.epitmeny + prev.income.telek;
+                //const currTax = current.income.ipa + current.income.epitmeny + current.income.telek;
+                //const prevTax = prev.income.ipa + prev.income.epitmeny + prev.income.telek;
+                const currTax = current.income.ipa + current.income.epitmeny + current.income.telek + current.income.ifa;
+                const prevTax = prev.income.ipa + prev.income.epitmeny + prev.income.telek + prev.income.ifa;
 
                 const calcGrowth = (currVal, prevVal) => prevVal > 0 ? ((currVal - prevVal) / prevVal) : 0;
 
@@ -141,7 +145,8 @@ export const fetchAndParseData = async () => {
                     ipa: calcGrowth(current.income.ipa, prev.income.ipa),
                     epitmeny: calcGrowth(current.income.epitmeny, prev.income.epitmeny),
                     telek: calcGrowth(current.income.telek, prev.income.telek),
-                    dologi: calcGrowth(current.expense.dologi, prev.expense.dologi)
+                    dologi: calcGrowth(current.expense.dologi, prev.expense.dologi),
+                    ifa: calcGrowth(current.income.ifa, prev.income.ifa),
                 };
             }
         }
