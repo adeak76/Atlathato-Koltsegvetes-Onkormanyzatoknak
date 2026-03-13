@@ -64,7 +64,7 @@ export default function KeyIndicators({ data, historicalData }) {
         year: d.year,
         "Iparűzési adó": d.income.ipa,
         "Építmény- és Telekadó": d.income.epitmeny + d.income.telek,
-        "Idegenforgalmi adó:" d.income.ifa
+        "Idegenforgalmi adó": d.income.ifa
     }));
 
     // Trend for Solidarity Tax
