@@ -33,11 +33,11 @@ export default function CategoryBreakdown({ data, type }) {
         title = 'Működési Költségvetési Bevételek';
         colors = COLORS_INCOME;
         chartData = [
-            { name: 'Közhatalmi Bevétel', value: data.income.kozh },
-            { name: 'Működési Bevétel', value: data.income.mukod },
-            { name: 'Átvett Pénzeszköz', value: data.income.atvett },
+            { name: 'Közhatalmi bevétel', value: data.income.kozh },
+            { name: 'Működési bevétel', value: data.income.mukod },
+            { name: 'Átvett pénzeszköz', value: data.income.atvett },
             // Other calculation (maradék ha van)
-            { name: 'Egyéb Támogatás/Bevétel', value: Math.max(0, data.income.total - (data.income.kozh + data.income.mukod + data.income.atvett)) }
+            { name: 'Egyéb támogatás/bevétel', value: Math.max(0, data.income.total - (data.income.kozh + data.income.mukod + data.income.atvett)) }
         ];
     } else {
         title = 'Működési Költségvetési Kiadások';
@@ -46,7 +46,7 @@ export default function CategoryBreakdown({ data, type }) {
             { name: 'Személyi jellegű', value: data.expense.szemelyi },
             { name: 'Járulék', value: data.expense.jarulek },
             { name: 'Dologi', value: data.expense.dologi },
-            { name: 'Pénzbeni Juttatás', value: data.expense.penzbeni },
+            { name: 'Pénzbeni juttatás', value: data.expense.penzbeni },
             { name: 'Egyéb', value: data.expense.egyeb },
         ];
     }
