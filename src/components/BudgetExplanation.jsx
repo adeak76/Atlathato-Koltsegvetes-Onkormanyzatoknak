@@ -33,7 +33,7 @@ export default function BudgetExplanation() {
                         <h4 style={{ fontSize: '1.1rem', margin: 0, color: 'var(--text-main)' }}>1. A Tervezési Folyamat</h4>
                     </div>
                     <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', lineHeight: 1.6, margin: 0 }}>
-                        A következő év költségvetésének tervezése már az előző év őszén elkezdődik. Először a <strong>kötelező feladatokat</strong> ({config.szovegek.kisokosPeldak.kotelezo}) kell biztosítani. Miután ezek megvannak, a fennmaradó keretet a képviselő-testület a <strong>{config.szovegek.kisokosPeldak.onkentes}</strong> (önként vállalt feladatok) csoportosítja.
+                        A következő év költségvetésének tervezése jóesetben már az előző év őszén elkezdődik. Először a <strong>kötelező feladatokat</strong> ({config.szovegek.kisokosPeldak.kotelezo}) kell biztosítani. Miután ezek megvannak, a fennmaradó keretet a képviselő-testület a <strong>{config.szovegek.kisokosPeldak.onkentes}</strong> (önként vállalt feladatok) csoportosítja.
                     </p>
                 </div>
 
@@ -46,8 +46,8 @@ export default function BudgetExplanation() {
                         <h4 style={{ fontSize: '1.1rem', margin: 0, color: 'var(--text-main)' }}>2. Működési kiadások</h4>
                     </div>
                     <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', lineHeight: 1.6, margin: 0 }}>
-                        A település mindennapos túléléséhez szükséges pénzek. Ide tartoznak a bérköltségek (Személyi juttatások), a közműdíjak és külsős szolgáltatások (Dologi kiadások),
-                        valamint az <strong>Állam felé fizetendő, kötelező elvonások</strong> (ami a tehetősebb településektől elvont pénz a szegényebbek javára).
+                        A település mindennapos túléléséhez szükséges pénzek. Ide tartoznak a <strong>bérköltségek</strong> (Személyi juttatások), a <strong>közműdíjak és külsős szolgáltatások</strong> (Dologi kiadások),
+                        valamint az <strong>állam felé fizetendő, kötelező elvonások</strong> (ami a tehetősebb településektől elvont pénz a szegényebbek javára).
                     </p>
                 </div>
 
@@ -60,8 +60,8 @@ export default function BudgetExplanation() {
                         <h4 style={{ fontSize: '1.1rem', margin: 0, color: 'var(--text-main)' }}>3. Beruházások (Felhalmozás)</h4>
                     </div>
                     <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', lineHeight: 1.6, margin: 0 }}>
-                        Ezekből a forrásokból épülnek az új utak, óvodák, egészségügyi intézmények és újulnak meg a közterek.
-                        A beruházásokhoz az önkormányzat <strong>saját forrást</strong>, illetve (ha van rá lehetőség) <strong>Hazai vagy EU-s pályázati támogatásokat</strong> használ fel.
+                        Ezekből a forrásokból épülnek az új utak és újulnak meg az oktatási és egészségügyi intézmények, a közterek.
+                        A beruházásokhoz az önkormányzat <strong>saját forrást</strong>, illetve (ha van rá lehetőség) <strong>hazai vagy EU-s pályázati támogatásokat</strong> használ fel.
                         Ezek alkotják a település vagyonának növekedését.
                     </p>
                 </div>
