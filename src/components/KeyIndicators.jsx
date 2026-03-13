@@ -47,9 +47,10 @@ export default function KeyIndicators({ data, historicalData }) {
     const operationSafetyRate = mandatoryExpenses / data.expense.total;
 
     // 4. Adóerősség
-    const totalLocalTax = data.income.ipa + data.income.epitmeny + data.income.telek;
+    const totalLocalTax = data.income.ipa + data.income.epitmeny + data.income.telek + data.income.ifa;
     const ipaRatio = totalLocalTax > 0 ? data.income.ipa / totalLocalTax : 0;
     const epitmenyTelekRatio = totalLocalTax > 0 ? (data.income.epitmeny + data.income.telek) / totalLocalTax : 0;
+    const ifaRatio = totalLocalTax > 0 ? data.income.ifa / totalLocalTax : 0;
 
     // Trend data for autonomy
     const trendData = historicalData.map(d => ({
@@ -61,8 +62,9 @@ export default function KeyIndicators({ data, historicalData }) {
     // Trend data for local taxes
     const taxTrendData = historicalData.map(d => ({
         year: d.year,
-        Iparűzési: d.income.ipa,
-        "Építmény- és Telekadó": d.income.epitmeny + d.income.telek
+        "Iparűzési adó": d.income.ipa,
+        "Építmény- és Telekadó": d.income.epitmeny + d.income.telek,
+        "Idegenforgalmi adó:" d.income.ifa
     }));
 
     // Trend for Solidarity Tax
@@ -167,6 +169,10 @@ export default function KeyIndicators({ data, historicalData }) {
                             <div className="responsive-stats-row" style={{ marginBottom: 0 }}>
                                 Építmény- és Telekadó arány: {formatPercent(epitmenyTelekRatio)}
                             </div>
+                            <div className="responsive-stats-row">
+                                IFA arány ({data.year}): {formatPercent(ifaRatio)}
+                                {data.yoy && formatYoY(data.yoy.ifa)}
+                            </div>
                         </div>
                     </div>
 
@@ -187,8 +193,9 @@ export default function KeyIndicators({ data, historicalData }) {
                                     formatter={(value) => new Intl.NumberFormat('hu-HU', { style: 'currency', currency: 'HUF', maximumFractionDigits: 0 }).format(value)}
                                 />
                                 <Legend wrapperStyle={{ paddingTop: '10px', fontSize: '0.85rem', color: 'var(--text-muted)' }} />
-                                <Bar dataKey="Iparűzési" stackId="a" fill="#034E81" radius={[0, 0, 4, 4]} />
+                                <Bar dataKey="Iparűzési adó" stackId="a" fill="#034E81" radius={[0, 0, 4, 4]} />
                                 <Bar dataKey="Építmény- és Telekadó" stackId="a" fill="#00582A" radius={[4, 4, 0, 0]} />
+                                <Bar dataKey="Idegenforgalmi adó" stackId="a" fill="#EEEEEE" radius={[0, 0, 4, 4]} />
                             </BarChart>
                         </ResponsiveContainer>
                     </div>
