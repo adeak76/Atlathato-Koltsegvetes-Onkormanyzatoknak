@@ -1,4 +1,5 @@
 {
+    "verzio": "1.1.0",
     "varosNeve": "Dörgicse Község Önkormányzata",
     "alapEv": 2026,
     "szinek": {
@@ -8,7 +9,8 @@
     },
     "elerhetoseg": {
         "cim": "8244 Dörgicse, Fő utca 16.",
-        "weboldal": "https://dorgicse.info.hu"
+        "weboldal": "https://dorgicse.info.hu",
+        "email": "info@dorgicse.info.hu"
     },
     "szovegek": {
         "polgarmesterNeve": "Deák Attila",
