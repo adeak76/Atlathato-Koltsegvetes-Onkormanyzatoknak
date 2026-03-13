@@ -64,9 +64,9 @@ export default function KeyIndicators({ data, historicalData }) {
     // Trend data for local taxes
     const taxTrendData = historicalData.map(d => ({
         year: d.year,
-    //    "Építmény- és Telekadó": d.income.epitmeny + d.income.telek,
-        "Építményadó": d.income.epitmeny,
-        "Telekadó": d.income.telek,
+        "Építmény- és Telekadó": d.income.epitmeny + d.income.telek,
+    //    "Építményadó": d.income.epitmeny,
+    //    "Telekadó": d.income.telek,
         "Idegenforgalmi adó": d.income.ifa,
         "Iparűzési adó": d.income.ipa
     }));
