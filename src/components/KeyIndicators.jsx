@@ -158,17 +158,17 @@ export default function KeyIndicators({ data, historicalData }) {
                 <div className="glass-panel" style={{ padding: '1.5rem', height: '400px', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                     <div className="responsive-header">
                         <div>
-                            <h4 style={{ color: 'var(--text-muted)' }}>Helyi Adók alakulása (millió Ft)</h4>
+                            <h4 style={{ color: 'var(--text-muted)' }}>Helyi Adók alakulása (millió Ft) és arányai</h4>
                             {/* Ide írhatsz települési adópolitikai megjegyzést, ha van ilyen */}
                         </div>
                         <div className="responsive-stats">
                             <div className="responsive-stats-row">
-                                Iparűzési adó arány ({data.year}): {formatPercent(ipaRatio)}
-                                {data.yoy && formatYoY(data.yoy.ipa)}
-                            </div>
-                            <div className="responsive-stats-row">
                                 Idegenforgalmi adó: {formatPercent(ifaRatio)}
                                 {data.yoy && formatYoY(data.yoy.ifa)}
+                            </div>
+                            <div className="responsive-stats-row">
+                                Iparűzési adó arány: {formatPercent(ipaRatio)}
+                                {data.yoy && formatYoY(data.yoy.ipa)}
                             </div>
                             <div className="responsive-stats-row" style={{ marginBottom: 0 }}>
                                 Építmény- és Telekadó arány: {formatPercent(epitmenyTelekRatio)}
