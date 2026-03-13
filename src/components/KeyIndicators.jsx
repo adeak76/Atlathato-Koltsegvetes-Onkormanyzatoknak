@@ -165,14 +165,14 @@ export default function KeyIndicators({ data, historicalData }) {
                             <div className="responsive-stats-row">
                                 Iparűzési adó arány ({data.year}): {formatPercent(ipaRatio)}
                                 {data.yoy && formatYoY(data.yoy.ipa)}
+                            </div><div className="responsive-stats-row">
+                                Idegenforgalmi adó: {formatPercent(ifaRatio)}
+                                {data.yoy && formatYoY(data.yoy.ifa)}
                             </div>
                             <div className="responsive-stats-row" style={{ marginBottom: 0 }}>
                                 Építmény- és Telekadó arány: {formatPercent(epitmenyTelekRatio)}
                             </div>
-                            <div className="responsive-stats-row">
-                                Idegenforgalmi adó: {formatPercent(ifaRatio)}
-                                {data.yoy && formatYoY(data.yoy.ifa)}
-                            </div>
+                            
                         </div>
                     </div>
 
@@ -193,9 +193,9 @@ export default function KeyIndicators({ data, historicalData }) {
                                     formatter={(value) => new Intl.NumberFormat('hu-HU', { style: 'currency', currency: 'HUF', maximumFractionDigits: 0 }).format(value)}
                                 />
                                 <Legend wrapperStyle={{ paddingTop: '10px', fontSize: '0.85rem', color: 'var(--text-muted)' }} />
-                                <Bar dataKey="Iparűzési adó" stackId="a" fill="#034E81" radius={[0, 0, 4, 4]} />
-                                <Bar dataKey="Építmény- és Telekadó" stackId="a" fill="#00582A" radius={[4, 4, 0, 0]} />
-                                <Bar dataKey="Idegenforgalmi adó" stackId="a" fill="purple" radius={[0, 0, 4, 4]} />
+                                <Bar dataKey="Iparűzési adó" stackId="a" fill="#034E81" radius={[4, 4, 0, 0]} />
+                                <Bar dataKey="Idegenforgalmi adó" stackId="a" fill="purple" radius={[0, 4, 4, 0]} />
+                                <Bar dataKey="Építmény- és Telekadó" stackId="a" fill="#00582A" radius={[0, 0, 4, 4]} />
                             </BarChart>
                         </ResponsiveContainer>
                     </div>
