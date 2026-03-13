@@ -159,6 +159,7 @@ export default function KeyIndicators({ data, historicalData }) {
                     <div className="responsive-header">
                         <div>
                             <h4 style={{ color: 'var(--text-muted)' }}>Helyi Adók alakulása és arányai (millió Ft)</h4>
+                            {data.yoy && formatYoY(data.yoy.taxTotal)}
                             {/* Ide írhatsz települési adópolitikai megjegyzést, ha van ilyen */}
                         </div>
                         <div className="responsive-stats">
