@@ -62,9 +62,9 @@ export default function KeyIndicators({ data, historicalData }) {
     // Trend data for local taxes
     const taxTrendData = historicalData.map(d => ({
         year: d.year,
-        "Iparűzési adó": d.income.ipa,
         "Építmény- és Telekadó": d.income.epitmeny + d.income.telek,
-        "Idegenforgalmi adó": d.income.ifa
+        "Idegenforgalmi adó": d.income.ifa,
+        "Iparűzési adó": d.income.ipa
     }));
 
     // Trend for Solidarity Tax
