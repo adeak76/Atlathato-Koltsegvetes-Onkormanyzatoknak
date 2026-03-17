@@ -22,13 +22,13 @@ const parseValue = (val) => {
  * └──────┴────────────────┴──────────────────┴─────────────┴──────────────┴─────────────┴──────────┴─────────────┴──────────────────────┴───────────────────────┘
  *
  * kiadas.xlsx — munkalap: "II. Alaptábla"
- * ┌──────┬────────────────┬─────────────┬──────────┬─────────┬────────────┬──────────┬──────────────────────────┐
- * │  Év  │ Összes kiadás  │ Személyi    │ Járulék  │ Dologi  │ Pénzbeni   │  Egyéb   │ Szolidaritási hozzájár.  │
- * │  (A) │     (B)        │    (C)      │   (D)    │   (E)   │    (F)     │   (G)    │          (H)             │
- * ├──────┼────────────────┼─────────────┼──────────┼─────────┼────────────┼──────────┼──────────────────────────┤
- * │ 2019 │    ...         │    ...      │   ...    │   ...   │    ...     │   ...    │          ...             │
- * │ 2026 │    ...         │    ...      │   ...    │   ...   │    ...     │   ...    │          ...             │
- * └──────┴────────────────┴─────────────┴──────────┴─────────┴────────────┴──────────┴──────────────────────────┘
+ * ┌──────┬────────────────┬─────────────┬──────────┬─────────┬────────────┬──────────┬──────────────────────────┬────────────────────────┐
+ * │  Év  │ Összes kiadás  │ Személyi    │ Járulék  │ Dologi  │ Pénzbeni   │  Egyéb   │ Szolidaritási hozzájár.  │ Közös Önk. Hivatal     │   
+ * │  (A) │     (B)        │    (C)      │   (D)    │   (E)   │    (F)     │   (G)    │          (H)             │        (I)             │
+ * ├──────┼────────────────┼─────────────┼──────────┼─────────┼────────────┼──────────┼──────────────────────────┼────────────────────────┤
+ * │ 2019 │    ...         │    ...      │   ...    │   ...   │    ...     │   ...    │          ...             │        ...             │
+ * │ 2026 │    ...         │    ...      │   ...    │   ...   │    ...     │   ...    │          ...             │        ...             │
+ * └──────┴────────────────┴─────────────┴──────────┴─────────┴────────────┴──────────┴──────────────────────────┴────────────────────────┘
  *
  * Az első sor fejléc. Az adatsorok A oszlopában az évszám áll.
  * A legutolsó év (config.alapEv) automatikusan "Terv"-ként jelenik meg.
@@ -92,6 +92,7 @@ export const fetchAndParseData = async () => {
             const kiadP            = kiadRow[5];  // F: Pénzbeni juttatás
             const kiadE            = kiadRow[6];  // G: Egyéb kiadás
             const kiadSzolidaritas = kiadRow[7];  // H: Szolidaritási hozzájárulás
+            const kiadKOH          = kiadRow[8];  // I: Közös Önkormányzati Hivatal
 
             results.push({
                 year,
@@ -115,7 +116,8 @@ export const fetchAndParseData = async () => {
                     dologi: parseValue(kiadD),
                     penzbeni: parseValue(kiadP),
                     egyeb: parseValue(kiadE),
-                    szolidaritas: parseValue(kiadSzolidaritas)
+                    szolidaritas: parseValue(kiadSzolidaritas),
+                    koh: parseValue(kiadKOH)
                 },
                 balance: parseValue(bevO) - parseValue(kiadO)
             });
@@ -146,6 +148,7 @@ export const fetchAndParseData = async () => {
                     epitmeny: calcGrowth(current.income.epitmeny, prev.income.epitmeny),
                     telek: calcGrowth(current.income.telek, prev.income.telek),
                     dologi: calcGrowth(current.expense.dologi, prev.expense.dologi),
+                    dologiKOH: calcGrowth(current.expense.dologi + current.expense.koh, prev.expense.dologi + prev.expense.koh),
                     ifa: calcGrowth(current.income.ifa, prev.income.ifa)
                 };
             }
