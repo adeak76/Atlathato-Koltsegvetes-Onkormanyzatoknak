@@ -43,7 +43,7 @@ export default function CategoryBreakdown({ data, type }) {
         title = 'Működési Költségvetési Kiadások';
         colors = COLORS_EXPENSE;
         chartData = [
-            { name: 'Személyi jellegű', value: data.expense.szemelyi },
+            { name: 'Személyi jellegű', value: data.expense.szemelyi + data.expense.koh },
             { name: 'Járulék', value: data.expense.jarulek },
             { name: 'Dologi', value: data.expense.dologi },
             { name: 'Pénzbeni juttatás', value: data.expense.penzbeni },
