@@ -43,7 +43,7 @@ export default function KeyIndicators({ data, historicalData }) {
     const stateDependencyRate = data.income.allam / data.income.total;
 
     // 3. Működési Biztonság (Kötelező fenntartás: Személyi + Dologi)
-    const mandatoryExpenses = data.expense.szemelyi + data.expense.dologi + data.expense.jarulek;
+    const mandatoryExpenses = data.expense.szemelyiKOH + data.expense.dologi + data.expense.jarulek;
     const operationSafetyRate = mandatoryExpenses / data.expense.total;
 
     // 4. Adóerősség
