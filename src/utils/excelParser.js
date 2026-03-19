@@ -17,8 +17,8 @@ const parseValue = (val) => {
  * │  Év  │ Összes bevétel │ Állami támogatás │ Közhatalmi  │ Iparűzési    │ Építményadó │ Telekadó │ Működési    │ Átvett pénzeszközök  │ Idegenforgalmi adó    │
  * │  (A) │     (B)        │      (C)         │    (D)      │    (E)       │    (F)      │   (G)    │    (H)      │        (I)           │         (J)           │
  * ├──────┼────────────────┼──────────────────┼─────────────┼──────────────┼─────────────┼──────────┼─────────────┼──────────────────────┼───────────────────────┤
- * │ 2017 │    ...         │     ...          │    ...      │    ...       │    ...      │   ...    │    ...      │        ...           │           ...         │
- * │ 202x │    ...         │     ...          │    ...      │    ...       │    ...      │   ...    │    ...      │        ...           │           ...         │
+ * │ 2019 │    ...         │     ...          │    ...      │    ...       │    ...      │   ...    │    ...      │        ...           │           ...         │
+ * │ 2026 │    ...         │     ...          │    ...      │    ...       │    ...      │   ...    │    ...      │        ...           │           ...         │
  * └──────┴────────────────┴──────────────────┴─────────────┴──────────────┴─────────────┴──────────┴─────────────┴──────────────────────┴───────────────────────┘
  *
  * kiadas.xlsx — munkalap: "II. Alaptábla"
@@ -26,8 +26,8 @@ const parseValue = (val) => {
  * │  Év  │ Összes kiadás  │ Személyi    │ Járulék  │ Dologi  │ Pénzbeni   │  Egyéb   │ Szolidaritási hozzájár.  │ Közös Önk. Hivatal     │   
  * │  (A) │     (B)        │    (C)      │   (D)    │   (E)   │    (F)     │   (G)    │          (H)             │        (I)             │
  * ├──────┼────────────────┼─────────────┼──────────┼─────────┼────────────┼──────────┼──────────────────────────┼────────────────────────┤
- * │ 2017 │    ...         │    ...      │   ...    │   ...   │    ...     │   ...    │          ...             │        ...             │
- * │ 202x │    ...         │    ...      │   ...    │   ...   │    ...     │   ...    │          ...             │        ...             │
+ * │ 2019 │    ...         │    ...      │   ...    │   ...   │    ...     │   ...    │          ...             │        ...             │
+ * │ 2026 │    ...         │    ...      │   ...    │   ...   │    ...     │   ...    │          ...             │        ...             │
  * └──────┴────────────────┴─────────────┴──────────┴─────────┴────────────┴──────────┴──────────────────────────┴────────────────────────┘
  *
  * Az első sor fejléc. Az adatsorok A oszlopában az évszám áll.
@@ -74,19 +74,15 @@ export const fetchAndParseData = async () => {
             const isPlan = year === config.alapEv;
 
             // Bevételek — egyszerű, egymás utáni oszlopok (B-tól I-ig)
-            const bevO         = bevRow[1];  // B: Összes bevétel
-            const bevAllam     = bevRow[2];  // C: Állami támogatás
-            const bevK         = bevRow[3];  // D: Közhatalmi bevétel
-            const bevIpa       = bevRow[4];  // E: Iparűzési adó
-            const bevEpit      = bevRow[5];  // F: Építményadó
-            const bevTelek     = bevRow[6];  // G: Telekadó
-            const bevM         = bevRow[7];  // H: Működési bevétel
-            const bevA         = bevRow[8];  // I: Átvett pénzeszközök
-            const bevIfa       = bevRow[9];  // J: Iparűzési adó
-            const bevFelhTotal = bevRow[10]; // K: Felhalmozási bevételek
-            const bevFelhAHT   = bevRow[11]; // L: Felhalmozási bevétel ÁHT-n belülről
-            const bevFelhELAD  = bevRow[12]; // M: Saját vagyon értékesítése
-            const bevFelhPE    = bevRow[13]; // N: Felhalmozási átvett pénzeszközök
+            const bevO     = bevRow[1];  // B: Összes bevétel
+            const bevAllam = bevRow[2];  // C: Állami támogatás
+            const bevK     = bevRow[3];  // D: Közhatalmi bevétel
+            const bevIpa   = bevRow[4];  // E: Iparűzési adó
+            const bevEpit  = bevRow[5];  // F: Építményadó
+            const bevTelek = bevRow[6];  // G: Telekadó
+            const bevM     = bevRow[7];  // H: Működési bevétel
+            const bevA     = bevRow[8];  // I: Átvett pénzeszközök
+            const bevIfa   = bevRow[9];  // J: Iparűzési adó
 
             // Kiadások — egyszerű, egymás utáni oszlopok (B-tól H-ig)
             const kiadO            = kiadRow[1];  // B: Összes kiadás
@@ -97,10 +93,6 @@ export const fetchAndParseData = async () => {
             const kiadE            = kiadRow[6];  // G: Egyéb kiadás
             const kiadSzolidaritas = kiadRow[7];  // H: Szolidaritási hozzájárulás
             const kiadKOH          = kiadRow[8];  // I: Közös Önkormányzati Hivatal
-            const kiadFelhTotal     = kiadRow[9];  // J: Felhalmozási kiadások
-            const kiadFelhBeruh    = kiadRow[10]; // K: Beruházások
-            const kiadFelhFeluj    = kiadRow[11]; // L: Felújítások
-            const kiadFelhEgyeb    = kiadRow[12]; // M: Egyéb felhalmozási
 
             results.push({
                 year,
@@ -115,11 +107,7 @@ export const fetchAndParseData = async () => {
                     atvett: parseValue(bevA),
                     allam: parseValue(bevAllam),
                     sajat: parseValue(bevK) + parseValue(bevM) + parseValue(bevA),
-                    ifa: parseValue(bevIfa),
-                    felhTotal: parseValue(bevFelTotal),
-                    felhAHT: parseValue(bevFelhAHT),
-                    felhELAD: parseValue(bevFelhELAD),
-                    felhPE: parseValue(bevFelhPE)
+                    ifa: parseValue(bevIfa)
                 },
                 expense: {
                     total: parseValue(kiadO),
@@ -129,11 +117,7 @@ export const fetchAndParseData = async () => {
                     penzbeni: parseValue(kiadP),
                     egyeb: parseValue(kiadE),
                     szolidaritas: parseValue(kiadSzolidaritas),
-                    koh: parseValue(kiadKOH),
-                    felhTotal: parseValue(kiadFelhTotal),
-                    felhBeruh: parseValue(kiadFelhBeruh),
-                    felhFeluj: parseValue(kiadFelhFeluj),
-                    felhEgyeb: parseValue(kiadFelhEgyeb)
+                    koh: parseValue(kiadKOH)
                 },
                 balance: parseValue(bevO) - parseValue(kiadO)
             });
@@ -165,8 +149,7 @@ export const fetchAndParseData = async () => {
                     telek: calcGrowth(current.income.telek, prev.income.telek),
                     dologi: calcGrowth(current.expense.dologi, prev.expense.dologi),
                     szemelyiKOH: calcGrowth(current.expense.szemelyi + current.expense.koh, prev.expense.szemelyi + prev.expense.koh),
-                    ifa: calcGrowth(current.income.ifa, prev.income.ifa),
-                    felhTotal: calcGrowth(current.income.felhTotal, prev.income.felhTotal)
+                    ifa: calcGrowth(current.income.ifa, prev.income.ifa)
                 };
             }
         }
