@@ -14,7 +14,7 @@
     },
     "szovegek": {
         "polgarmesterNeve": "Deák Attila",
-        "polgarmesterKoszonto": "Tisztelt Dörgicsei Lakosok! Örömmel mutatjuk be Önöknek településünk {alapEv}. évi költségvetésének átlátható összefoglalóját. Célunk, hogy minden polgár számára <strong>közérthetővé</strong> tegyük, mire fordítja az önkormányzat a közös forrásainkat. Bízunk benne, hogy ez az eszköz hozzájárul a bizalom erősítéséhez és a közügyek iránti érdeklődés növeléséhez. Az aktuális évi adatok mellett a korábbi évek költségvetési adatai is elérhetőek, így a különböző időszakok könnyen össze is hasonlíthatóak.",
+        "polgarmesterKoszonto": "Tisztelt Dörgicsei Lakosok! Örömmel mutatjuk be Önöknek településünk {alapEv}. évi költségvetésének átlátható összefoglalóját. Célunk, hogy minden polgár számára <strong>közérthetővé</strong> tegyük, mire fordítja az önkormányzat a közös forrásainkat. Bízunk benne, hogy ez az eszköz hozzájárul a pénzügyeink megértéséhez és a közügyek iránti érdeklődés növeléséhez. Az aktuális évi adatok mellett a korábbi évek költségvetési adatai is elérhetőek, így a különböző időszakok könnyen össze is hasonlíthatóak.",
         "kisokosPeldak": {
             "kotelezo": "pl. intézmények fenntartása, közvilágítás, hivatal működése",
             "onkentes": "fejlesztésekre, beruházásokra és pályázatokra"
