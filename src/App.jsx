@@ -110,9 +110,10 @@ function App() {
 
       <footer style={{ marginTop: '2rem', padding: '2rem', background: 'var(--surface)', borderRadius: 'var(--border-radius-lg)', border: '1px solid var(--glass-border)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', color: 'var(--text-muted)' }}>
         <div style={{ textAlign: 'center' }}>
-          <h4 style={{ color: 'var(--text-main)', marginBottom: '0.5rem', fontSize: '1.2rem' }}>{config.varosNeve}</h4>
+          <h4 style={{ color: 'var(--text-main)', marginBottom: '0.5rem', fontSize: '1.2rem' }}>Adatok forrása: {config.varosNeve}</h4>
           <p style={{ fontSize: '0.95rem', marginBottom: '0.3rem' }}><strong>Cím:</strong> {config.elerhetoseg.cim}</p>
           {config.elerhetoseg.adoszam && <p style={{ fontSize: '0.95rem', marginBottom: '0.3rem' }}><strong>Adószám:</strong> {config.elerhetoseg.adoszam}</p>}
+          <h4 style={{ color: 'var(--text-main)', marginBottom: '0.5rem', fontSize: '1.2rem' }}>További információk</h4>
           <p style={{ fontSize: '0.95rem' }}><strong>Honlap:</strong> <a href={config.elerhetoseg.weboldal} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brand-primary)', textDecoration: 'none' }}>{config.elerhetoseg.weboldal.replace(/^https?:\/\/(www\.)?/, '')}</a></p>
           <p style={{ fontSize: '0.95rem' }}><strong>Email:</strong> {config.elerhetoseg.email}</p>
           <p style={{ fontSize: '0.75rem' }}>Verzió: {config.verzio}</p>
